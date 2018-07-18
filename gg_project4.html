@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title></title>
+   <link href="gg_project.css" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+</head>
+
+<body>
+   <header>
+   
+		<nav>
+		<a id="navicon" href="#"><img src="navicon.png" alt="" /></a>
+			<ul>
+				<li><a href="gg_project.html">Home</a></li>
+				<li><a href="gg_project2.html">Menu</a></li>
+				<li><a href="gg_project3.html">Contact Us</a></li>
+				<li><a href="gg_project4.html">Order Now!</a></li>
+				
+			</ul>
+		</nav>
+	</header>
+
+   <article>
+      <h2>Order Now</h2>
+      <form>
+         <input type="checkbox" id="item1" value="7" />
+         <label for="item1">Chicken Empanadas ($7.00)</label> <br>
+         <input type="checkbox" id="item2" value="7" />
+         <label for="item2">Beef Empanadas ($7.00)</label> <br>
+         <input type="checkbox" id="item3" value="4" />
+         <label for="item3">Sweet Potato Empanadas ($4.00)</label> <br>
+         <input type="checkbox" id="item4" value="4" />
+         <label for="item4">Zucchini Empanadas ($4.00)</label> <br>
+         <input type="checkbox" id="item5" value="2" />
+         <label for="item5">Cheese Empanadas ($2.00)</label> <br>
+         <input type="button" value="Submit" id="sButton" />
+      </form>
+      <div>
+         <p id="total"></p>
+      </div>
+   </article>
+   <script>
+   document.getElementById("sButton").addEventListener("click", calcTotal, false);
+		
+		function calcTotal() {
+			var itemTotal = 0;
+			var items = document.getElementsByTagName("input");
+			
+			for(var i = 0; i < items.length; i++) {
+				if(items[i].checked ) {
+					itemTotal += (items[i].value * 1); 
+				}
+			}
+			
+			document.getElementById("total").innerHTML = "Your order total is $" + itemTotal +".00";
+				if(itemTotal !== 0) {
+					document.getElementById("total").style.color= "cyan";
+					document.getElementById("total").style.fontSize="1.4em";
+				}
+		}
+		
+		document.getElementById("sButton").addEventListener("click", addPic, false);
+		
+		function addPic() {
+		document.getElementById("pic3").innerHTML='<img src="empanada5.jpg" />';
+		
+		}
+
+   </script>
+   <div id="pic3"></div>
+   
+</body>
+<footer>
+	Greg's Empanada Shop &#169 2424 Hunt Ave, Glen Head, NY, 11545;
+</footer>
+</html>

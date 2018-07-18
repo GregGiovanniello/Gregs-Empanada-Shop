@@ -1,0 +1,191 @@
+/*Style Sheet For Greg's Empanada Project */
+
+html {
+	background: url(peppers.jpg) fixed;
+	height: 100%;
+}
+
+body {
+	background: url(wood4.jpg);
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 3.55%;
+	padding-right: 3.55%;
+	clear: none;
+	float: none;
+	min-height: 100%;
+	width: 85%;
+	max-width: 900px;
+	background-color: white;
+	-moz-box-shadow: rgba(0, 0, 0, 0.9) 20px 0px 25px, rgba(0, 0, 0, 0.9) -20px 0px 25px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.9) 20px 0px 25px,  rgba(0, 0, 0, 0.9) -20px 0px 25px;
+	box-shadow: rgba(0, 0, 0, 0.9) 20px 0px 25px,  rgba(0, 0, 0, 0.9) -20px 0px 25px
+}
+
+#canvas {
+	clear: both;
+	float: right;
+}
+
+footer {
+	background-color: black;
+	color: green;
+	font-size: .8em;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+header {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+body header img#pic1 {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+
+img#pic2 {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 15%;
+	margin: center;
+}
+
+h1, h2 {
+	color: green ;
+}
+
+p {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2em;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-weight: normal;
+	padding:0px 0px 2px 0px;
+}
+h2 {
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: 'Handlee', cursive;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    background-color: black;
+	width: 100%;
+}
+
+li {
+	clear: right;
+    float: left;
+	padding-left: 30px;
+}
+
+li a {
+    display: block;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: green;
+	color: white;
+}
+
+dl, form {
+	font-weight: bold;
+}
+
+a#navicon {
+   display: none;
+}
+
+/* =========================
+   Mobile Styles: 0 to 600px 
+   =========================
+*/
+
+@media only screen and (max-width: 600px) {
+
+	aside { 
+		-webkit-order: 99;
+		order: 99;
+	}
+	footer {
+		-webkit-order: 100;
+		order: 100
+	}
+	  a#navicon {
+      display: block;
+   }
+   
+   header nav {
+      padding-bottom: 15px;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1.2em;
+      line-height: 1em;
+      height: 1.5em;
+	  flex-flow: row wrap;
+	  width:85%;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+   
+   canvas#canvas {
+	   display: none;
+   }
+   
+   div#pic3 {
+	   display:none;
+   }
+  
+}
+
+/* ============================================
+   Tablet and Desktop Styles: 601px and greater 
+   ============================================
+*/
+
+@media only screen and (min-width: 601px) {
+	nav.horizontal ul {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+	}
+	nav.horizontal li {
+		-webkit-flex: 1 1 auto;
+		flex: 1 1 auto;
+}
+
+display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+
+
+
+
